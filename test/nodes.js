@@ -28,3 +28,11 @@ exports['create assignment node'] = function (test) {
     test.equal(result.value(), 42);
 };
 
+exports['create name node'] = function (test) {
+    const result = geast.name('a');
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.name(), 'a');
+};
+
