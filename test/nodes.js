@@ -64,3 +64,12 @@ exports['create binary node'] = function (test) {
     test.equal(result.right(), 'b');
 };
 
+exports['create unary node'] = function (test) {
+    const result = geast.unary('!', 'a');
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.operator(), '!');
+    test.equal(result.expression(), 'a');
+};
+
