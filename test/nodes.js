@@ -19,6 +19,15 @@ exports['create variable node'] = function (test) {
     test.equal(result.type(), 'int');
 };
 
+exports['create argument node'] = function (test) {
+    const result = geast.argument('a', 'int');
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.name(), 'a');
+    test.equal(result.type(), 'int');
+};
+
 exports['create assignment node'] = function (test) {
     const result = geast.assignment('a', 42);
 
