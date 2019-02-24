@@ -45,3 +45,22 @@ exports['create name node'] = function (test) {
     test.equal(result.name(), 'a');
 };
 
+exports['create property node'] = function (test) {
+    const result = geast.property('a', 'b');
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.expression(), 'a');
+    test.equal(result.name(), 'b');
+};
+
+exports['create binary node'] = function (test) {
+    const result = geast.binary('+', 'a', 'b');
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.operator(), '+');
+    test.equal(result.left(), 'a');
+    test.equal(result.right(), 'b');
+};
+
