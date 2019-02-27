@@ -73,3 +73,15 @@ exports['create unary node'] = function (test) {
     test.equal(result.expression(), 'a');
 };
 
+exports['create sequence node'] = function (test) {
+    const result = geast.sequence([ geast.constant(42), geast.constant(3) ]);
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.ok(result.nodes());
+    test.ok(Array.isArray(result.nodes()));
+    test.equal(result.nodes().length, 2);
+    test.equal(result.nodes()[0].value(), 42);
+    test.equal(result.nodes()[1].value(), 3);
+};
+
