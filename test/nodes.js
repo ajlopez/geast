@@ -94,3 +94,12 @@ exports['create conditional node'] = function (test) {
     test.equal(result.body().value(), 3);
 };
 
+exports['create loop node'] = function (test) {
+    const result = geast.loop(geast.constant(42), geast.constant(3));
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.condition().value(), 42);
+    test.equal(result.body().value(), 3);
+};
+
