@@ -103,3 +103,14 @@ exports['create loop node'] = function (test) {
     test.equal(result.body().value(), 3);
 };
 
+exports['create call node'] = function (test) {
+    const result = geast.call(geast.name('factorial'), [ geast.constant(42) ]);
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.target().name(), 'factorial');
+    test.ok(Array.isArray(result.arguments()));
+    test.equal(result.arguments().length, 1);
+    test.equal(result.arguments()[0].value(), 42);
+};
+
