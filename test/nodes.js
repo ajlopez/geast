@@ -114,3 +114,14 @@ exports['create call node'] = function (test) {
     test.equal(result.arguments()[0].value(), 42);
 };
 
+exports['create for node'] = function (test) {
+    const result = geast.for(1, 2, 3, 4);
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.pre(), 1);
+    test.equal(result.condition(), 2);
+    test.equal(result.post(), 3);
+    test.equal(result.body(), 4);
+};
+
