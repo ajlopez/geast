@@ -28,6 +28,14 @@ exports['create argument node'] = function (test) {
     test.equal(result.type(), 'int');
 };
 
+exports['create arguments node'] = function (test) {
+    const result = geast.arguments([ 1, 2, 3 ]);
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.deepEqual(result.arguments(), [ 1, 2, 3 ]);
+};
+
 exports['create assignment node'] = function (test) {
     const result = geast.assignment('a', 42);
 
