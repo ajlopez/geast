@@ -1,6 +1,10 @@
 # Geast
 
-Generic Abstract Syntax Tree, with visitor pattern, WIP.
+Generic Abstract Syntax Tree, with visitor pattern.
+
+## Versions
+
+- Version 0.0.1, first version.
 
 ## Previous work
 
