@@ -94,12 +94,13 @@ exports['create sequence node'] = function (test) {
 };
 
 exports['create conditional node'] = function (test) {
-    const result = geast.conditional(geast.constant(42), geast.constant(3));
+    const result = geast.conditional(geast.constant(42), geast.constant(3), geast.constant(4));
 
     test.ok(result),
     test.equal(typeof result, 'object');
     test.equal(result.condition().value(), 42);
-    test.equal(result.body().value(), 3);
+    test.equal(result.then().value(), 3);
+    test.equal(result.else().value(), 4);
 };
 
 exports['create loop node'] = function (test) {
