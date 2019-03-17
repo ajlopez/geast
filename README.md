@@ -5,6 +5,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 ## Versions
 
 - Version 0.0.1, first version.
+- Version 0.0.2, conditional node with then and else body.
 
 ## Previous work
 
