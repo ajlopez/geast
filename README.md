@@ -10,6 +10,11 @@ TBD
 
 TBD
 
+## To Do
+
+- Change internal values in nodes
+- Set/get additional values in nodes
+
 ## License
 
 MIT
