@@ -6,6 +6,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 
 - Version 0.0.1, first version.
 - Version 0.0.2, conditional node with then and else body.
+- custom node definition, change value of existing properties.
 
 ## Previous work
 
@@ -17,7 +18,6 @@ TBD
 
 ## To Do
 
-- Change internal values in nodes
 - Set/get additional values in nodes
 
 ## License

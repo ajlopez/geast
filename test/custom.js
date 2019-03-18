@@ -21,3 +21,15 @@ exports['define and create custom node'] = function (test) {
     
     test.ok(processed);
 };
+
+exports['create constant node and add new property'] = function (test) {
+    const result = geast.constant(42, 3);
+
+    result.define('processed');
+    
+    test.strictEqual(result.processed(), null);
+    
+    result.processed(true);
+    
+    test.strictEqual(result.processed(), true);
+};
