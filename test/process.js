@@ -30,6 +30,6 @@ exports['process with procesor'] = function (test) {
     process(test, 'loop');
     process(test, 'call');
     process(test, 'for');
-    process(test, 'define');
+    process(test, 'function');
 };
 

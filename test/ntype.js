@@ -19,6 +19,6 @@ exports['node types'] = function (test) {
     nodeType(test, 'loop');
     nodeType(test, 'call');
     nodeType(test, 'for');
-    nodeType(test, 'define');
+    nodeType(test, 'function');
 };
 

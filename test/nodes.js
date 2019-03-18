@@ -134,12 +134,14 @@ exports['create for node'] = function (test) {
     test.equal(result.body(), 4);
 };
 
-exports['create define node'] = function (test) {
-    const result = geast.define(['a', 'b'], 42);
+exports['create function node'] = function (test) {
+    const result = geast.function('foo', ['a', 'b'], 42, 'int');
 
     test.ok(result),
     test.equal(typeof result, 'object');
+    test.equal(result.name(), 'foo');
     test.deepEqual(result.arguments(), [ 'a', 'b' ]);
     test.equal(result.body(), 42);
+    test.equal(result.return(), 'int');
 };
 
