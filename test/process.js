@@ -9,9 +9,10 @@ function process(test, name) {
     processor["process" + name[0].toUpperCase() + name.substring(1)] = function (node) {
         processed = true;
         test.equal(node.ntype(), name);
+        return true;
     };
     
-    geast[name]().process(processor);
+    test.strictEqual(geast[name]().process(processor), true);
     
     test.ok(processed);
 }
