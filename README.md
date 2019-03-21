@@ -7,6 +7,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 - Version 0.0.1, first version.
 - Version 0.0.2, conditional node with then and else body.
 - Version 0.0.3, custom node definition, change value of existing properties, define custom property in node.
+- Version 0.0.4, return value in `node.process(processor)`.
 
 ## Previous work
 
@@ -18,7 +19,6 @@ TBD
 
 ## To Do
 
-- Return value in `node.process(processor)`.
 - Set/get additional values in nodes
 
 ## License
