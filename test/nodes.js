@@ -145,3 +145,17 @@ exports['create function node'] = function (test) {
     test.equal(result.return(), 'int');
 };
 
+exports['create continue node'] = function (test) {
+    const result = geast.continue();
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+};
+
+exports['create break node'] = function (test) {
+    const result = geast.break();
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+};
+
