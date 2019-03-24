@@ -123,6 +123,15 @@ exports['create call node'] = function (test) {
     test.equal(result.arguments()[0].value(), 42);
 };
 
+exports['create indexed node'] = function (test) {
+    const result = geast.indexed(geast.name('primes'), geast.constant(42));
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.target().name(), 'primes');
+    test.equal(result.index().value(), 42);
+};
+
 exports['create for node'] = function (test) {
     const result = geast.for(1, 2, 3, 4);
 
