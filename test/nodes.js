@@ -159,12 +159,32 @@ exports['create continue node'] = function (test) {
 
     test.ok(result),
     test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'continue');
 };
 
 exports['create break node'] = function (test) {
     const result = geast.break();
 
-    test.ok(result),
+    test.ok(result);
     test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'break');
 };
+
+exports['create return node'] = function (test) {
+    const result = geast.return();
+
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'return');
+};
+
+exports['create return node with expression'] = function (test) {
+    const result = geast.return(geast.constant(42));
+
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'return');
+    test.equal(result.expression().value(), 42);
+};
+
 
