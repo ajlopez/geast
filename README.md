@@ -9,6 +9,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 - Version 0.0.3, custom node definition, change value of existing properties, define custom property in node.
 - Version 0.0.4, return value in `node.process(processor)`.
 - Version 0.0.5, break, continue, indexed nodes
+- Version 0.0.6, return node
 
 ## Previous work
 
