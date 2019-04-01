@@ -10,6 +10,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 - Version 0.0.4, return value in `node.process(processor)`.
 - Version 0.0.5, break, continue, indexed nodes
 - Version 0.0.6, return node
+- Version 0.0.7, rename assignment node to assign node, minor changes
 
 ## Previous work
 
