@@ -10,7 +10,7 @@ exports['node types'] = function (test) {
     nodeType(test, 'variable');
     nodeType(test, 'argument');
     nodeType(test, 'arguments');
-    nodeType(test, 'assignment');
+    nodeType(test, 'assign');
     nodeType(test, 'name');
     nodeType(test, 'property');
     nodeType(test, 'binary');
@@ -20,5 +20,7 @@ exports['node types'] = function (test) {
     nodeType(test, 'call');
     nodeType(test, 'for');
     nodeType(test, 'function');
+    nodeType(test, 'break');
+    nodeType(test, 'continue');
 };
 

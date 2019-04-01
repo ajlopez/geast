@@ -22,7 +22,7 @@ exports['process with procesor'] = function (test) {
     process(test, 'variable');
     process(test, 'argument');
     process(test, 'arguments');
-    process(test, 'assignment');
+    process(test, 'assign');
     process(test, 'name');
     process(test, 'property');
     process(test, 'binary');
@@ -32,5 +32,7 @@ exports['process with procesor'] = function (test) {
     process(test, 'call');
     process(test, 'for');
     process(test, 'function');
+    process(test, 'continue');
+    process(test, 'break');
 };
 

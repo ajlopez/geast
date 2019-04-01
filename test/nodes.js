@@ -36,13 +36,13 @@ exports['create arguments node'] = function (test) {
     test.deepEqual(result.arguments(), [ 1, 2, 3 ]);
 };
 
-exports['create assignment node'] = function (test) {
-    const result = geast.assignment('a', 42);
+exports['create assign node'] = function (test) {
+    const result = geast.assign('a', 42);
 
     test.ok(result),
     test.equal(typeof result, 'object');
     test.equal(result.lefthand(), 'a');
-    test.equal(result.value(), 42);
+    test.equal(result.expression(), 42);
 };
 
 exports['create name node'] = function (test) {
