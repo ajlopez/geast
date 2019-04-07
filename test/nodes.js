@@ -144,14 +144,14 @@ exports['create for node'] = function (test) {
 };
 
 exports['create function node'] = function (test) {
-    const result = geast.function('foo', ['a', 'b'], 42, 'int');
+    const result = geast.function('foo', 'int', ['a', 'b'], 42);
 
     test.ok(result),
     test.equal(typeof result, 'object');
     test.equal(result.name(), 'foo');
+    test.equal(result.type(), 'int');
     test.deepEqual(result.arguments(), [ 'a', 'b' ]);
     test.equal(result.body(), 42);
-    test.equal(result.return(), 'int');
 };
 
 exports['create continue node'] = function (test) {
@@ -186,5 +186,28 @@ exports['create return node with expression'] = function (test) {
     test.equal(result.ntype(), 'return');
     test.equal(result.expression().value(), 42);
 };
+
+exports['create array node'] = function (test) {
+    const result = geast.array('int', 42);
+
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'array');
+    test.equal(result.type(), 'int');
+    test.equal(result.length(), 42);
+};
+
+exports['create method node'] = function (test) {
+    const result = geast.method('foo', 'int', 'public', [], 42);
+
+    test.ok(result);
+    test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'method');
+    test.equal(result.type(), 'int');
+    test.equal(result.visibility(), 'public');
+    test.deepEqual(result.arguments(), []);
+    test.equal(result.body(), 42);
+};
+
 
 
