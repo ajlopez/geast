@@ -37,5 +37,6 @@ exports['process with procesor'] = function (test) {
     process(test, 'return');
     process(test, 'array');
     process(test, 'method');
+    process(test, 'eval');
 };
 

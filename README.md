@@ -22,7 +22,6 @@ TBD
 
 ## To Do
 
-- Eval node (command with expression)
 - Convert tree to object
 
 ## License

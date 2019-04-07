@@ -10,6 +10,16 @@ exports['create constant node'] = function (test) {
     test.equal(result.type(), 'int');
 };
 
+exports['create eval node'] = function (test) {
+    const result = geast.eval(geast.constant(42, 'int'));
+
+    test.ok(result),
+    test.equal(typeof result, 'object');
+    test.equal(result.ntype(), 'eval');
+    test.equal(result.expression().value(), 42);
+    test.equal(result.expression().type(), 'int');
+};
+
 exports['create variable node'] = function (test) {
     const result = geast.variable('a', 'int');
 

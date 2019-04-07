@@ -34,5 +34,6 @@ exports['has lexer property'] = function (test) {
     lexer(test, 'return');
     lexer(test, 'array');
     lexer(test, 'method');
+    lexer(test, 'eval');
 };
 
