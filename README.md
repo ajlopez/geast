@@ -11,6 +11,7 @@ Generic Abstract Syntax Tree, with visitor pattern.
 - Version 0.0.5, break, continue, indexed nodes
 - Version 0.0.6, return node
 - Version 0.0.7, rename assignment node to assign node, minor changes
+- Version 0.0.8, array, method, eval nodes; function node refactor; lexer property in nodes
 
 ## Previous work
 
